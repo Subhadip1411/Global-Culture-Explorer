@@ -1,0 +1,121 @@
+:root {
+  --accent: #1976d2;
+  --bg: #f6f9ff;
+  --card: #fff;
+  --text: #06283d;
+  --muted: #6b7280;
+}
+
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: var(--accent);
+  color: #fff;
+  flex-wrap: wrap;
+}
+.logo { font-size: 1.2rem; font-weight: bold; }
+.controls {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+.controls input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  font-size: 0.9rem;
+}
+.btn {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.map {
+  height: 40vh;
+}
+
+.panel {
+  background: var(--card);
+  padding: 20px;
+  border-top: 3px solid var(--accent);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+.panel.open {
+  max-height: 2000px;
+  opacity: 1;
+}
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  float: right;
+}
+
+#countrySection {
+  text-align: center;
+}
+.flag {
+  max-width: 140px;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto 10px;
+}
+#countrySection h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+.small {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 2px 0;
+}
+
+
+#recipesSection h3,
+#wikiSection h3 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.recipe-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.recipe-item img {
+  border-radius: 6px;
+}
+
+body.dark { background: #0f1724; color: #e6eef7; }
+body.dark .panel { background: #071022; }
+body.dark .panel h2,
+body.dark .panel h3 { color: #4da3ff; }

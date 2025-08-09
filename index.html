@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Global Culture Explorer</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+ 
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+
+  <header class="topbar">
+    <h1 class="logo">🌍 Global Culture Explorer</h1>
+    <div class="controls">
+      <input id="search" type="search" placeholder="Search country" aria-label="Search country"/>
+      <button id="searchBtn" class="btn">Search</button>
+      <button id="themeBtn" class="btn" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    
+    <div id="map" class="map" role="region" aria-label="World map"></div>
+
+    <aside id="infoPanel" class="panel" aria-hidden="true">
+      <button id="closePanel" class="close-btn" aria-label="Close panel">✕</button>
+      <section id="countrySection"></section>
+      <section id="recipesSection"></section>
+      <section id="wikiSection"></section>
+    </aside>
+  </main>
+
+ 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
